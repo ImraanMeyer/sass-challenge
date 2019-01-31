@@ -1,0 +1,247 @@
+/* Mixins -------------------- */
+/* Base Styles -------------------- */
+@import "https://fonts.googleapis.com/css?family=Noto+Sans+SC|Unlock|Poppins|Merriweather";
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather', cursive; }
+
+h2 {
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 100%;
+  height: 2em !important; }
+
+h3 {
+  font-size: 1.25em;
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; }
+
+p {
+  font-family: 'Poppins';
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 100%;
+  color: black !important;
+  margin: 0;
+  padding: 0; }
+
+#center {
+  text-align: center; }
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px; }
+
+ul,
+ol {
+  margin: 30px 0; }
+
+li {
+  margin-bottom: 10px; }
+
+/* Pseudo-classes ------------------ */
+a:link {
+  color: #ffa949;
+  text-decoration: none; }
+a:visited {
+  color: #add8e6; }
+a:hover {
+  color: rgba(255, 169, 73, 0.5); }
+
+/* Web Fonts -------------------- */
+@font-face {
+  font-family: 'Merriweather', cursive; }
+.main-header {
+  background-image: linear-gradient(rgba(143, 63, 63, 0.349), rgba(53, 53, 102, 0.4)), url(../images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh !important;
+  padding-top: 30vh;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 100%; }
+.main-heading {
+  font-size: 5.625rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  margin: 2px 0 0 0; }
+.main-title {
+  color: #fff;
+  font-size: 1.625rem;
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px; }
+.main-footer {
+  padding: 6em 0 0 0;
+  background: linear-gradient(rgba(143, 63, 63, 0.349), rgba(53, 53, 102, 0.4)), url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 100%; }
+
+.primary-content .intro {
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: initial;
+  padding: 1.4em 4em 0.2em 4em;
+  text-align: center; }
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block; }
+
+.arrow {
+  width: 15rem;
+  margin-top: 120px; }
+
+/* Media Queries -------------------- */
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto; }
+
+@media (max-width: 1024px) {
+  .primary-content,
+  .secondary-content {
+    width: 90%; }
+
+  .wildlife {
+    padding: 10% 12%;
+    margin: 50px 0 20px; } }
+@media (max-width: 794px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none; }
+
+  img {
+    height: auto;
+    width: auto;
+    padding: 10%;
+    border-radius: 50%; }
+
+  p {
+    font-size: 1.3125em;
+    text-align: left;
+    text-transform: none; }
+
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0; }
+
+  .main-title {
+    font-size: 1.3rem;
+    border: none; }
+
+  .main-heading {
+    font-size: 5rem;
+    line-height: 1.1; }
+
+  .arrow {
+    display: none; }
+
+  .intro {
+    font-size: 1rem; }
+
+  .resorts,
+  .tips {
+    float: none;
+    width: 100%; }
+
+  .main-footer {
+    padding: 20px 0; } }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100vh 140vh 70vh 35vh;
+  grid-template-areas: "header header header" "primary primary primary" "secondary secondary secondary" "footer footer footer"; }
+
+.main-header {
+  grid-area: header; }
+
+.primary-content {
+  grid-area: primary;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50vh 50vh;
+  grid-template-areas: "intro" "section"; }
+
+.intro-primary {
+  grid-area: intro;
+  padding: 2em 0 0 0;
+  font-size: 1.6vw;
+  margin-left: 2em;
+  margin-right: 2em; }
+
+.wildlife {
+  grid-area: section;
+  margin: 2em;
+  padding: 0; }
+
+.images {
+  margin-top: 1.4em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 330px;
+  grid-gap: 0.6em;
+  grid-template-areas: "pic1 pic2 pic3"; }
+  .images .img {
+    height: 80%;
+    max-width: 100%;
+    width: 100%; }
+  .images .pic1 {
+    grid-area: pic1; }
+  .images .pic2 {
+    grid-area: pic2; }
+  .images .pic3 {
+    grid-area: pic3; }
+
+.secondary-content {
+  grid-area: secondary;
+  margin: 2em;
+  display: grid;
+  grid-template-columns: 1fr 20px 1fr;
+  grid-template-rows: 55vh;
+  grid-template-areas: "article1 blank article2"; }
+
+.resorts,
+.tips {
+  background-color: beige;
+  padding: 1.6em;
+  border-top: burlywood solid 4px; }
+
+.resorts {
+  grid-area: article1; }
+
+.tips {
+  grid-area: article2; }
+
+.main-footer {
+  grid-area: footer; }
+
+/*# sourceMappingURL=main.css.map */
